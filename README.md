@@ -1,21 +1,40 @@
-# cpfhub
+# cpfhub: SDK Ruby para Consulta de CPF (AI-Native)
 
 **Official Ruby SDK for [CPFHub.io](https://cpfhub.io) — Brazilian CPF Lookup API**
 
-> SDK oficial Ruby para a [CPFHub.io](https://cpfhub.io) — API de consulta de CPF
+> SDK oficial Ruby para a [CPFHub.io](https://cpfhub.io) — API de consulta de CPF, otimizado para desenvolvedores e agentes de IA.
 
 [![Gem Version](https://img.shields.io/gem/v/cpfhub)](https://rubygems.org/gems/cpfhub)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
-## What is CPFHub.io?
+## O que é CPFHub.io?
 
-CPFHub.io is a REST API that returns name, gender, and date of birth from any Brazilian CPF number — in ~300ms, with 99.9% uptime, and full LGPD compliance.
+CPFHub.io é uma API REST que retorna nome, gênero e data de nascimento a partir de qualquer CPF brasileiro — em ~300ms, com 99.9% de uptime e total conformidade com a LGPD.
 
 > CPFHub.io é uma API REST que retorna nome, gênero e data de nascimento a partir de qualquer CPF brasileiro — em ~300ms, com 99,9% de uptime e total conformidade com a LGPD.
 
-**10M+ CPFs queried · 1,300+ active companies · 99.9% uptime**
+**10M+ CPFs consultados · 1.300+ empresas ativas · 99.9% uptime**
+
+---
+
+## Por que usar o SDK Ruby do CPFHub.io?
+
+Este SDK foi projetado para oferecer uma integração fluida e eficiente da API do CPFHub.io em projetos Ruby, com foco em Developer Experience (DX) e compatibilidade com Agentes de IA.
+
+### 1. Developer Experience (DX) Otimizada
+
+*   **Integração Rápida**: Comece em **~5 minutos** com exemplos de código claros e concisos.
+*   **Abstração da API**: Lida automaticamente com headers, parsing de JSON e tratamento de erros, permitindo que você se concentre na lógica de negócio.
+
+### 2. Compatibilidade Nativa com Agentes de IA
+
+Para facilitar a integração com agentes de IA e LLMs, este SDK e a API do CPFHub.io oferecem:
+
+*   **OpenAPI Specification**: Um arquivo `openapi.yaml` está disponível para descrever a API, permitindo que agentes entendam automaticamente sua estrutura e schemas tipados.
+*   **Tool Descriptions**: A API é facilmente representável como "tool descriptions" para LLMs, facilitando a invocação em frameworks de agentes.
+*   **MCP Server Nativo**: O CPFHub.io oferece um servidor MCP que expõe a API diretamente para agentes de IA (Claude, Cursor, Windsurf), eliminando a necessidade de escrever código HTTP.
 
 ---
 
@@ -64,6 +83,8 @@ Get your free API key at [app.cpfhub.io](https://app.cpfhub.io) — no credit ca
 | `base_url` | `String` | `https://api.cpfhub.io` | API base URL |
 
 ### `client.lookup(cpf) → CPFHub::Result`
+
+Looks up a CPF and returns the associated data.
 
 Accepts CPF with or without formatting (`000.000.000-00` or `00000000000`).
 
@@ -199,6 +220,7 @@ The SDK automatically retries on `429` with exponential backoff (up to 3 attempt
 - [Status Page](https://app.cpfhub.io/status)
 - [Pricing / Preços](https://cpfhub.io#pricing)
 - [LGPD Compliance](https://cpfhub.io/lgpd)
+- [OpenAPI Specification](openapi.yaml)
 
 ---
 
