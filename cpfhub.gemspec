@@ -2,7 +2,7 @@ Gem::Specification.new do |spec|
   spec.name          = "cpfhub"
   spec.version       = "1.0.0"
   spec.authors       = ["CPFHub.io"]
-  spec.email         = ["contato@cpfhub.io"]
+  spec.email         = ["contact@cpfhub.io"]
 
   spec.summary       = "Official Ruby SDK for CPFHub.io — Brazilian CPF lookup API."
   spec.description   = "Official Ruby SDK for CPFHub.io — Brazilian CPF lookup API. Get name, gender and date of birth from any CPF in ~300ms. Full LGPD compliance. Supports Rails, Sidekiq and plain Ruby."
